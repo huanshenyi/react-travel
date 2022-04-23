@@ -1,6 +1,10 @@
 import React from "react";
+import { UserLayout } from "../../layouts";
 
 export const SignInPage: React.FC = (props) => {
-    console.log(props);
-    return <h1>ログイン</h1>
-}
+  return (
+    <UserLayout>
+      <h1>ログイン</h1>
+    </UserLayout>
+  );
+};
