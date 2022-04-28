@@ -56,7 +56,6 @@ export const Header: React.FC = (props) => {
   const onLogout = () => {
     dispatch(userSlice.actions.logOut());
     history.push("/");
-    window.location.reload(); //なくてもいい
   };
 
   return (

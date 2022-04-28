@@ -48,3 +48,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ```
 export NODE_OPTIONS=--openssl-legacy-provider
 ```
+
+token
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxZWNkN2Q5MC03ZDQ3LTQzYzItOWZkOC03ZWM5MzMwMDc0ZTMiLCJ1c2VybmFtZSI6IjEyMzQ1Njc4OTBAcXEuY29tIiwibmJmIjoxNjUxMTA2MDU0LCJleHAiOjE2NTExOTI0NTQsImlzcyI6ImZha2V4aWVjaGVuZy5jb20iLCJhdWQiOiJmYWtleGllY2hlbmcuY29tIn0.Vvq4TObqO3r7zQQEb9HPUAo1rNi2ISVzikU4p19m5lw
+```
