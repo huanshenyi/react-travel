@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./App.module.css";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import {
@@ -10,6 +10,8 @@ import {
   ShoppingCartPage,
 } from "./pages";
 import { useSelector } from "./redux/hooks";
+import { useDispatch } from "react-redux";
+import { getShoppingCart } from "./redux/shoppingCart/slice";
 
 // プライベートコンポネート
 const PrivateRoute = ({ component, isAuthenticated, ...rest }) => {
@@ -25,6 +27,12 @@ const PrivateRoute = ({ component, isAuthenticated, ...rest }) => {
 
 function App() {
   const jwt = useSelector((state) => state.user.token);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (jwt) {
+      dispatch(getShoppingCart(jwt));
+    }
+  }, [jwt]);
   return (
     <div className={styles.App}>
       <BrowserRouter>
