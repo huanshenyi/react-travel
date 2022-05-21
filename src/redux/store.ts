@@ -9,6 +9,7 @@ import { productSearchSlice } from "./productSearch/slice";
 import { userSlice } from "./user/slice";
 import { shoppingCartSlice } from "./shoppingCart/slice";
 import { persistStore, persistReducer } from "redux-persist";
+import { orderSlice } from "./order/slice";
 import storage from "redux-persist/lib/storage";
 
 const persistConfig = {
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   productSearch: productSearchSlice.reducer,
   user: userSlice.reducer,
   shoppingCart: shoppingCartSlice.reducer,
+  order: orderSlice.reducer,
 });
 
 // データ永久化処理
